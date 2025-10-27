@@ -97,6 +97,11 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
+// Home route
+app.get('/', (req, res) => {
+  res.send('Welcome to the User Authentication API');
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
